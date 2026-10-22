@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Красный архив — энциклопедия истории СССР, марксизма, коммунизма, социализма и левой политической мысли.">
+  <meta name="theme-color" content="#8b1e25">
+  <title>Красный архив — история, идеи, общество</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="top-stripe"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Красный архив — на главную">
+      <span class="brand-mark" aria-hidden="true"><span>★</span></span>
+      <span><strong>КРАСНЫЙ АРХИВ</strong><small>ИСТОРИЯ · ИДЕИ · ОБЩЕСТВО</small></span>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-expanded="false" aria-controls="mainNav">☰ <span>Меню</span></button>
+    <nav id="mainNav" class="main-nav">
+      <a href="#library">Библиотека</a><a href="#chronology">Хронология</a><a href="#theory">Теория</a><a href="#sources">Источники</a>
+      <button class="nav-button" id="favoritesNav">★ Избранное <span id="favoriteCount">0</span></button>
+      <button class="nav-button outline" id="accountBtn">Войти</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> Цифровая историческая библиотека</div>
+        <h1>Изучай прошлое.<br><em>Разбирай идеи.</em></h1>
+        <p>История Советского Союза, марксистская традиция, коммунистические и социалистические движения, политическая экономия и споры о будущем общества.</p>
+        <div class="hero-actions"><a class="button primary" href="#library">Открыть библиотеку <span>↘</span></a><a class="button ghost" href="#theory">Начать с теории</a></div>
+        <div class="hero-note"><span class="red-dot"></span> Статьи, понятия, хронология и первоисточники</div>
+      </div>
+      <div class="hero-poster" aria-label="Декоративный советский конструктивистский постер">
+        <div class="poster-circle"></div><div class="poster-diagonal"></div>
+        <div class="poster-big">ЗНАТЬ<br>ИСТОРИЮ</div><div class="poster-small">ЧИТАТЬ · СРАВНИВАТЬ · ДУМАТЬ</div><div class="poster-star">★</div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Разделы архива">
+      <div><strong>01</strong><span>История СССР</span></div><div><strong>02</strong><span>Марксизм</span></div><div><strong>03</strong><span>Политическая теория</span></div><div><strong>04</strong><span>Первоисточники</span></div>
+    </section>
+
+    <section id="library" class="section library-section">
+      <div class="section-heading">
+        <div><div class="section-kicker">Каталог материалов</div><h2>Библиотека <span>архива</span></h2></div>
+        <p>Ищи по ключевым словам, фильтруй по направлениям и сохраняй материалы в избранное.</p>
+      </div>
+      <div class="search-row">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Например: НЭП, Маркс, классовая борьба…" autocomplete="off"><kbd>↵</kbd></label>
+        <button class="button red" id="clearSearch">Сбросить</button>
+      </div>
+      <div class="filter-row" id="categoryFilters" aria-label="Фильтр по категориям"></div>
+      <div class="result-line"><span id="resultCount">Материалы</span><select id="sortSelect" aria-label="Сортировка"><option value="featured">Сначала рекомендуемые</option><option value="title">По названию</option><option value="category">По категории</option></select></div>
+      <div id="articleGrid" class="article-grid"></div>
+      <div id="noResults" class="empty-state" hidden><strong>Материалы не найдены</strong><p>Попробуй изменить запрос или сбросить фильтры.</p><button class="button red" id="resetFilters">Сбросить фильтры</button></div>
+    </section>
+
+    <section id="chronology" class="timeline-section">
+      <div class="timeline-wrap">
+        <div class="section-heading light">
+          <div><div class="section-kicker">Ключевые даты</div><h2>Хронология <span>эпохи</span></h2></div>
+          <p>Краткий маршрут по основным событиям советской истории. Каждая дата — отправная точка для дальнейшего чтения.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section id="theory" class="section theory-section">
+      <div class="section-heading">
+        <div><div class="section-kicker">Понятия и направления</div><h2>Теория <span>и дискуссии</span></h2></div>
+        <p>Левая политическая мысль включает разные школы и внутренние споры. Смотри на определения, исторический контекст и аргументы авторов.</p>
+      </div>
+      <div class="theory-grid">
+        <a href="#library" class="theory-tile" data-theory-filter="Марксизм"><span class="tile-number">01 / ТЕОРИЯ</span><strong>Марксизм</strong><span>Класс, капитал, труд, исторический материализм</span><b>Исследовать ↗</b></a>
+        <a href="#library" class="theory-tile red-tile" data-theory-filter="Коммунизм"><span class="tile-number">02 / ИДЕЯ</span><strong>Коммунизм</strong><span>Общество без классов: концепции и исторические модели</span><b>Исследовать ↗</b></a>
+        <a href="#library" class="theory-tile" data-theory-filter="Социализм"><span class="tile-number">03 / ДВИЖЕНИЕ</span><strong>Социализм</strong><span>От кооперативов и демократии до плановой экономики</span><b>Исследовать ↗</b></a>
+        <a href="#library" class="theory-tile" data-theory-filter="Политическая мысль"><span class="tile-number">04 / ДИСКУССИЯ</span><strong>Политическая мысль</strong><span>Государство, власть, свобода, собственность и общество</span><b>Исследовать ↗</b></a>
+      </div>
+    </section>
+
+    <section id="sources" class="sources-section">
+      <div class="sources-wrap">
+        <div class="section-heading">
+          <div><div class="section-kicker">Читать первоисточники</div><h2>Библиотека <span>источников</span></h2></div>
+          <p>Оригинальные тексты помогают понять, что именно утверждал автор, а не только то, как его идеи пересказывают.</p>
+        </div>
+        <div class="source-grid">
+          <article class="source-card"><span class="source-type">ПЕРВОИСТОЧНИК · 1848</span><h3>«Манифест Коммунистической партии»</h3><p>Карл Маркс и Фридрих Энгельс. Политический текст о классах и коммунистическом движении.</p><a href="https://www.marxists.org/russkij/marx/1848/manifesto.htm" target="_blank" rel="noopener noreferrer">Читать текст ↗</a></article>
+          <article class="source-card"><span class="source-type">ПЕРВОИСТОЧНИК · 1867</span><h3>«Капитал», том I</h3><p>Исследование Маркса о капиталистическом способе производства и политической экономии.</p><a href="https://www.marxists.org/russkij/marx/1867/capital.htm" target="_blank" rel="noopener noreferrer">Найти текст ↗</a></article>
+          <article class="source-card"><span class="source-type">АРХИВ ДОКУМЕНТОВ</span><h3>Президентская библиотека</h3><p>Цифровые коллекции, документы и материалы по истории России.</p><a href="https://www.prlib.ru/" target="_blank" rel="noopener noreferrer">Открыть ресурс ↗</a></article>
+          <article class="source-card"><span class="source-type">СПРАВОЧНЫЙ РЕСУРС</span><h3>Большая российская энциклопедия</h3><p>Справочные статьи для проверки дат, терминов и биографических сведений.</p><a href="https://bigenc.ru/" target="_blank" rel="noopener noreferrer">Открыть ресурс ↗</a></article>
+        </div>
+        <p class="editorial-note"><strong>Принцип архива:</strong> показывать источники, отделять факты от интерпретаций и отмечать спорные вопросы. Левый фокус проекта не отменяет необходимости проверять утверждения и изучать разные аргументы.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><a class="footer-brand" href="#">★ КРАСНЫЙ АРХИВ</a><span>История · идеи · общество</span><span class="footer-small">Версия 0.2 · демонстрационный проект</span></div></footer>
+
+  <dialog id="articleDialog" class="article-dialog"><div class="dialog-top"><span id="dialogCategory"></span><button id="dialogCloseTop" class="icon-close" aria-label="Закрыть">×</button><div class="dialog-title-row"><h2 id="dialogTitle"></h2><button id="bookmarkButton" class="bookmark-button">☆ В избранное</button></div><p id="dialogDescription"></p></div><div id="dialogContent" class="dialog-content"></div><div class="dialog-bottom"><span id="dialogSourceNote">Материал архива · справочная статья</span><button class="button red" id="dialogClose">Закрыть статью</button></div></dialog>
+
+  <dialog id="accountDialog" class="small-dialog"><button class="icon-close dialog-x" id="accountClose" aria-label="Закрыть">×</button><div class="section-kicker">Личный кабинет</div><h2>Аккаунты — следующий этап</h2><p>Сейчас это статический прототип: реальные аккаунты требуют серверной части, базы данных и безопасной авторизации.</p><div class="account-preview"><label>Имя пользователя<input id="demoUser" placeholder="Например, читатель"></label><button class="button red" id="demoLogin">Включить локальный профиль</button><small>Демонстрационный профиль хранится только в этом браузере и не является защищённым аккаунтом.</small></div></dialog>
+
+  <dialog id="adminDialog" class="admin-dialog"><button class="icon-close dialog-x" id="adminClose" aria-label="Закрыть">×</button><div class="section-kicker">Редактор локальных материалов</div><h2>Добавить статью</h2><p>Материал будет сохранён только в этом браузере. Для публичной админ-панели нужен сервер.</p><form id="articleForm"><label>Заголовок<input name="title" required maxlength="100"></label><label>Категория<select name="category"><option>История СССР</option><option>Марксизм</option><option>Коммунизм</option><option>Социализм</option><option>Политическая мысль</option><option>Персоналии</option></select></label><label>Краткое описание<textarea name="description" required maxlength="240" rows="2"></textarea></label><label>Текст статьи<textarea name="body" required rows="6" placeholder="Можно использовать обычный текст и абзацы."></textarea></label><div class="form-actions"><button type="button" class="button ghost-dark" id="adminCancel">Отмена</button><button type="submit" class="button red">Сохранить локально</button></div></form><div id="adminMessage" role="status"></div></dialog>
+
+  <script src="js/articles.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
